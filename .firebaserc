@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "jwt-role-base": {
+      "hosting": {
+        "jwt-base-on-role": [
+          "jwt-role-base"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "jwt-role-base"
+  }
+}

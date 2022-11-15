@@ -1,0 +1,18 @@
+
+<form class="form" [formGroup]="userForm">
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example1">Email address</label>
+        <input formControlName="email" type="email" id="form2Example1" placeholder="Email" class="form-control" />
+        <p *ngIf="userForm.controls['email'].touched && userForm.controls['email'].invalid" class="text-danger">please enter valide Email</p>
+    </div>
+  
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form2Example2">Password</label>
+      <input formControlName="password" type="password" id="form2Example2" placeholder="password" class="form-control" />
+      <p *ngIf="userForm.controls['password'].touched && userForm.controls['password'].invalid" class="text-danger">please enter valide Password</p>
+    </div>
+    <button [disabled]="!userForm.valid" (click)="submit()" class="btn btn-primary" type="submit">Submit form</button>
+    <p>{{response}}</p>
+    </form>
